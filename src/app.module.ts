@@ -7,6 +7,7 @@ import { AppService } from './app.service';
   imports: [
     GraphQLModule.forRoot({
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      sortSchema: true,
     }),
   ],
   providers: [AppService],
