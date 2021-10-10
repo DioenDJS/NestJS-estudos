@@ -59,7 +59,11 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 - [Node.js](https://nodejs.org/en/) <img align="center" alt="img nodejs" height="20" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" style="max-width:100%;" />
 - [typescript](https://www.typescriptlang.org/) <img align="center" alt="img typescript" height="20" width="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" style="max-width:100%;" />
+- [Docker](https://www.docker.com/get-started) <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg" height="20" width="25" alt="Nest Logo" />
 - [nestjs](https://nestjs.com/) <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" height="20" width="25" alt="Nest Logo" />
+- [TYPEORM](https://typeorm.io/#/) <img src="https://raw.githubusercontent.com/typeorm/typeorm/master/resources/logo_big.png" height="20" width="45" alt="Nest Logo" />
+
+
 
 ## Projeto :computer:
 
@@ -68,9 +72,15 @@ Projeto tem como objetivo aprimorar conhecimentos e habilidades com as ferrament
 ## Como executar :gear:
 
 - Clone o repositório `https://github.com/DioenDJS/NestJS-estudos.git`.
-<!-- - Install as dependências com o comando `npm install`. -->
-<!-- - Rode o `npm run dev` para iniciar a aplicação. -->
-<!-- Ao final a aplicação estará disponível em `http://localhost:3000`. -->
+- Install as dependências com o comando `npm install`.
+- Rode o docker  `docker-compose up` para subir a imagem do postgres.
+- Rode o projeto `npm run start:dev` para iniciar a aplicação.
+- Ao final a aplicação estará disponível em `http://localhost:3000`.
+
+
+> como foi instalado e configurado o projeto
+
+> [Notion](https://www.notion.so/Project-NestJS-1df0f4eaa70646a1a99a8ec95fb76aef) <img align="center" alt="img notion" height="20" width="25" src="https://raw.githubusercontent.com/DioenDJS/ESIII---TypeScript-Node-e-Express-/main/assets/notion.png" style="max-width:100%;" /> 
 
 <!-- 
 ## Insomnia
