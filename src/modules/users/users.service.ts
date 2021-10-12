@@ -40,15 +40,29 @@ export class UsersService {
     }
     return user;
   }
+
   async updateUser(userId:string, updateUserInput: UpdateUserInput):Promise<User>{
 
-    const user = await this.findOneUser(userId);
+    const user = await this.userRepository.findOne(userId);
 
     await this.userRepository.update(user, {...updateUserInput});
 
     const userUpdated = this.userRepository.create({...user, ...updateUserInput});
 
     return userUpdated;
+  }
+
+  async removeUser(id: string):Promise<Boolean>{
+
+    const user = await this.userRepository.findOne(id)
+  
+    const deleted = await this.userRepository.delete(user);
+
+    if(deleted){
+      return true;
+    }
+
+    return false;
   }
 
 }
