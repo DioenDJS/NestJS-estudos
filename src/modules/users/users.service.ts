@@ -1,4 +1,4 @@
-import { Injectable, InternalServerErrorException } from '@nestjs/common';
+import { Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreateUserInput } from './dto/create-user.input';
@@ -29,6 +29,26 @@ export class UsersService {
     }
 
     return userSaved;
+  }
+
+  async findOneUser(id: string):Promise<User>{
+    
+    const user = await this.userRepository.findOne(id)
+
+    if(! user){
+      throw new NotFoundException("Usuário não existe !")
+    }
+    return user;
+  }
+  async updateUser(userId:string, updateUserInput: UpdateUserInput):Promise<User>{
+
+    const user = await this.findOneUser(userId);
+
+    await this.userRepository.update(user, {...updateUserInput});
+
+    const userUpdated = this.userRepository.create({...user, ...updateUserInput});
+
+    return userUpdated;
   }
 
 }
